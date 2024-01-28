@@ -23,10 +23,13 @@ ecoadvice = ['Подбирай мусор с земли и выбрасывай 
 @bot.command()
 async def eco(ctx):
     await ctx.send(random.choice(ecoadvice))
-#Пишет рандомный совет по защите окружающей среды из списка
 
 @bot.command()
 async def whatiseco(ctx):
     await ctx.send(f'https://www.products.pcc.eu/ru/blog/что-такое-экология-главное-об-этом-п/ по этой ссылке ты узнаешь всё нужное об экологии и что это такое.')
 
+@bot.command()
+async def helpme(ctx):
+    await ctx.send(f'$hi - Бот здоровается \n#heh - хехехехехе \n$ecoadvice - 1 из 12 советов по улучшению экологии \n$whatiseco - Сайт о экологии')
+    
 bot.run("token")
